@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21 - RE7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="start-screen">
+        <button id="btn-audio-toggle">Audio: ON</button>
+
+        <h1>21</h1>
+        <p>Selecciona la dificultad:</p>
+        <button class="difficulty-btn" data-mode="facil">Fácil</button>
+        <button class="difficulty-btn" data-mode="medio">Medio</button>
+        <button class="difficulty-btn" data-mode="dificil">Difícil</button>
+        <button class="difficulty-btn" data-mode="experto">Experto</button>
+        <button class="difficulty-btn" data-mode="leon">LEON DEBE MORIR!</button>
+        <button class="difficulty-btn" data-mode="CAOS">CAOS!</button>
+        <button class="difficulty-btn" data-mode="adaptativo">adaptativo</button>
+    </div>
+
+    <div id="end-screen" class="hidden">
+        <h2 id="end-message"></h2>
+        <button id="btn-restart" class="difficulty-btn">Elegir Dificultad</button>
+    </div>
+
+    <div id="game-board" class="hidden">
+        <div id="opponent-area" class="player-area">
+            <div class="stats">
+                <h2>Oponente</h2>
+                <div>Vidas: <span id="opponent-lives">10</span></div>
+            </div>
+            <div id="opponent-trumps" class="trump-container"></div>
+            <div id="opponent-hand" class="hand"></div>
+            <div class="score">Puntuación: <span id="opponent-score">0</span></div>
+        </div>
+
+        <div id="center-area">
+            <div id="match-info">
+                <div>Ronda: <span id="round-number">1</span></div>
+                <div id="target-score">Objetivo: 21</div>
+                <div>Apuesta: <span id="current-bet">1</span></div>
+            </div>
+            <div id="deck">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Card_back_01.svg/703px-Card_back_01.svg.png" alt="Mazo">
+            </div>
+            <div id="messages">Cargando...</div>
+        </div>
+
+        <div id="player-area" class="player-area">
+            <div class="stats">
+                <h2>Jugador</h2>
+                <button id="btn-open-menu">Comodines (<span id="player-trump-count">0</span>)</button>
+                <div>Vidas: <span id="player-lives">10</span></div>
+            </div>
+            <div id="player-trumps" class="trump-container"></div>
+            <div id="player-hand" class="hand"></div>
+            <div class="score">Puntuación: <span id="player-score">0</span></div>
+        </div>
+    </div>
+
+    <div id="controls" class="hidden">
+        <button id="btn-hit">Pedir Carta</button>
+        <button id="btn-stand">Plantarse</button>
+    </div>
+
+    <div id="trump-menu" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-menu" class="close-btn">&times;</span>
+            <h2>Mis Comodines</h2>
+            <p>Haz clic en un comodín para usarlo (solo en tu turno).</p>
+            <div id="trump-menu-list"></div>
+        </div>
+    </div>
+
+    <div id="timer-display">Tiempo: <span>--</span></div>
+
+    <div id="trump-notification" class="hidden"></div>
+
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
