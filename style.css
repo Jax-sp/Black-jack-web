@@ -120,3 +120,84 @@ body {
 .trump-more-btn:hover {
     background-color: #777;
 }
+
+@media (max-width: 600px) {
+    #game-board {
+        width: 100vw;
+        height: 100vh;
+        max-width: none;
+        padding: 10px;
+        grid-template-rows: 1.2fr 0.8fr 1.5fr;
+        border: none;
+        border-radius: 0;
+    }
+
+    .card, .card-back {
+        width: 55px;
+        height: 80px;
+        font-size: 30px;
+        margin: 2px;
+    }
+
+    #center-area {
+        padding: 5px 0;
+    }
+    
+    #match-info { font-size: 14px; }
+    #target-score { font-size: 18px; }
+    #messages { font-size: 18px; }
+
+    #deck img {
+        width: 50px;
+        height: 70px;
+    }
+
+    #controls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-top: 2px solid #8B0000;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.5);
+    }
+
+    #controls button {
+        flex: 1;
+        margin: 0 10px;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    #btn-open-menu {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    #timer-display {
+        top: 5px;
+        right: 5px;
+        font-size: 18px;
+        padding: 2px 10px;
+    }
+
+    #player-area {
+        padding-bottom: 80px;
+    }
+
+    .score {
+        font-size: 18px;
+        margin-top: 5px;
+    }
+}
